@@ -11,5 +11,11 @@ public class zombies : MonoBehaviour
         zombie.SetActive(false);
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(gameObject.tag == "Limit")
+        {
+            zombie.SetActive(false);
+        }
+    }
 }
