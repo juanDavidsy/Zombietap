@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Vidas : MonoBehaviour
 {
-   
+    public GameObject gameover;
     public Image corazon;
     public int cantdecorazones;
     public RectTransform posprimercorazon;
@@ -27,7 +27,7 @@ public class Vidas : MonoBehaviour
         if(cantdecorazones <= 0)
         {
             gameObject.SetActive(false);
-            
+            gameover.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
