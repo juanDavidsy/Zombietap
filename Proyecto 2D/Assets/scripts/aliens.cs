@@ -5,19 +5,31 @@ using UnityEngine;
 public class aliens : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject alienss;
-    
+
+    public RuntimeAnimatorController sangre;
+    public RuntimeAnimatorController personaje;
+
     private void OnMouseDown()
     {
-       
-        alienss.SetActive(false);
+        GetComponent<zombiesMovement>().speedMovement = 0;
+        GetComponent<Animator>().runtimeAnimatorController = sangre;
+        StartCoroutine(WaitDead());
+        
+    }
+
+    IEnumerator WaitDead()
+    {
+        yield return new WaitForSeconds(1f);
+        GetComponent<zombiesMovement>().speedMovement = 2;
+        GetComponent<Animator>().runtimeAnimatorController = personaje;
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Limit")
         {
-            alienss.SetActive(false);
+           gameObject.SetActive(false);
         }
     }
 }

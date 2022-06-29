@@ -20,6 +20,7 @@ public class Vidas : MonoBehaviour
             newcorazon.transform.parent = mycanva.transform;
             poscorazon.position = new Vector2(poscorazon.position.x + offset, poscorazon.position.y);
         }
+        Destroy(corazon);
     }
 
     private void Update()
@@ -28,6 +29,7 @@ public class Vidas : MonoBehaviour
         {
             gameObject.SetActive(false);
             gameover.SetActive(true);
+           
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

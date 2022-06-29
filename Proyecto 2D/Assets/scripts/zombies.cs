@@ -5,18 +5,36 @@ using UnityEngine.Audio;
 
 public class zombies : MonoBehaviour
 {
-    public GameObject zombie;
-    
+    public RuntimeAnimatorController sangre;
+    public RuntimeAnimatorController personaje;
+
     private void OnMouseDown()
     {
-        zombie.SetActive(false);
+        GetComponent<zombiesMovement>().speedMovement = 0;
+        
+        GetComponent<Animator>().runtimeAnimatorController = sangre;
+        StartCoroutine(WaitDead());
     }
+    IEnumerator WaitDead()
+    {
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+        GetComponent<zombiesMovement>().speedMovement = 2;
 
+        GetComponent<Animator>().runtimeAnimatorController = personaje;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Limit")
+        if (collision.tag == "Limit")
         {
-            zombie.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }
+        
+       
+
+        
+
+
+
