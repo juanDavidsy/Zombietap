@@ -2723,7 +2723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2345602270543163948, guid: c456673dc69e6f94390b23106814ef5b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2345602270543163948, guid: c456673dc69e6f94390b23106814ef5b, type: 3}
       propertyPath: m_TagString
@@ -2792,7 +2792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182070578553777029, guid: 7853fbec5c9ecaa4a8c9016aa3a62f7d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3182070578553777029, guid: 7853fbec5c9ecaa4a8c9016aa3a62f7d, type: 3}
       propertyPath: m_TagString
@@ -2919,6 +2919,10 @@ PrefabInstance:
     - target: {fileID: 6943724352002964393, guid: 118a852d76832a04f88970ff7e96067b, type: 3}
       propertyPath: m_Name
       value: Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943724352002964393, guid: 118a852d76832a04f88970ff7e96067b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6943724352002964393, guid: 118a852d76832a04f88970ff7e96067b, type: 3}
       propertyPath: m_TagString

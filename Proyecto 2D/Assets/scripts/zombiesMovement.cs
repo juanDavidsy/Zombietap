@@ -14,6 +14,11 @@ public class zombiesMovement : MonoBehaviour
     {
         direccion.y = -1;
         transform.Translate(direccion * speedMovement * Time.deltaTime);
+        if(tiempo >= 15)
+        {
+            speedMovement = 5;
+        }
+        tiempo += Time.deltaTime;
     }
 }
   
